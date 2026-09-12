@@ -1,0 +1,136 @@
+/* =========================================
+   BRANDS
+   ========================================= */
+
+.brands {
+    width: 100%;
+    overflow: hidden;
+}
+
+.brands .section-head {
+    margin-bottom: 55px;
+}
+
+.brands .section-head h2 em {
+    font-style: italic;
+}
+
+
+/* =========================================
+   BRAND GRID
+   ========================================= */
+
+.brands-grid {
+    width: min(1050px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================================
+   BRAND CARD
+   ========================================= */
+
+.brand-card {
+    min-height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background: transparent;
+    opacity: 0;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+
+/* =========================================
+   ICON
+   ========================================= */
+
+.brand-card i {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+/* =========================================
+   NAME
+   ========================================= */
+
+.brand-card span {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+
+/* =========================================
+   HOVER
+   ========================================= */
+
+.brand-card:hover {
+    background: rgba(0, 0, 0, 0.025);
+}
+
+.brand-card:hover i {
+    transform: scale(1.08);
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 800px) {
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .brand-card {
+        min-height: 110px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 500px) {
+    .brands .section-head {
+        margin-bottom: 35px;
+    }
+    .brands-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .brand-card {
+        min-height: 90px;
+        gap: 9px;
+    }
+    .brand-card i {
+        font-size: 19px;
+    }
+    .brand-card span {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .brand-card {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none;
+    }
+}
