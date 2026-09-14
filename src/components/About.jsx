@@ -11,7 +11,7 @@ export default function About() {
         <div className="about-statement reveal">
 
           <span className="big-number">
-            #1
+          
           </span>
 
           {/* S.Digital Logo */}
