@@ -5,7 +5,7 @@ export default function Portfolio() {
     <section id="portfolio" className="portfolio section">
       <div className="section-head split reveal">
         <div>
-          <p className="eyebrow dark">SELECTED WORK</p>
+          <p className="eyebrow dark">WORK</p>
           <h2>Work that earns<br /><em>attention.</em></h2>
         </div>
       </div>
