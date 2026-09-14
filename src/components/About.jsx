@@ -33,15 +33,15 @@ export default function About() {
           </p>
 
           <p>
-            Salani Digital helps Indian and international            <hr></hr>
+            Salani Digital helps Indian and international            
 
-            businesses grow through online marketing            <hr></hr>
+            businesses grow through online marketing           
 
             strategies.            
- Salani Digital is a professional            <hr></hr>
+ Salani Digital is a professional            
 
-            digital marketing             
-agency helping businesses            <hr></hr>
+            digital marketing            
+agency helping businesses           
 
             grow online with result-driven marketing
             strategies.
