@@ -1,31 +1,28 @@
-
 export default function Footer() {
   return (
     <footer>
-      <a className="brand" href="#home">
+      {/* S.Digital */}
+      <a className="brand" href="#home" aria-label="S.Digital">
         <span className="brand-mark">S</span>
-        <span>Salani<span>Digital</span></span>
+        <span>
+          Salani<span>Digital</span>
+        </span>
       </a>
 
-      <p>Digital marketing built for meaningful growth.</p>
-
-      <div className="footer-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-      </div>
-
+      {/* Developer Credit */}
       <div className="footer-credit">
-        <span>
-          © {new Date().getFullYear()} Salani Digital. Built for digital growth.
-        </span>
-
         <span className="built-by">
-          Built by <strong >@Shreyansh Shikhar Srivastava</strong>
+          Built by{" "}
+          <a
+            href="https://shreyansh-03.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="developer-link"
+          >
+            <strong>Shreyansh Shikhar Srivastava</strong>
+          </a>
         </span>
       </div>
     </footer>
   );
 }
-

@@ -2,35 +2,53 @@ import { useEffect, useState } from "react";
 import { heroImages } from "../data/site";
 
 export default function Hero() {
-  const [index, setIndex] = useState(0);
+  const [activeImage, setActiveImage] = useState(0);
 
   useEffect(() => {
-    const timer = setInterval(() => setIndex((value) => (value + 1) % heroImages.length), 5200);
-    return () => clearInterval(timer);
+    const interval = setInterval(() => {
+      setActiveImage((current) => (current + 1) % heroImages.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
   }, []);
 
   return (
-    <section id="home" className="hero">
+    <section className="hero" id="home">
+
+      {/* HERO IMAGE SLIDER */}
       <div className="hero-media">
-        {heroImages.map((src, i) => (
-          <img key={src} className={i === index ? "active" : ""} src={src}
-            alt="Creative digital marketing team at work" loading={i ? "lazy" : "eager"} />
+        {heroImages.map((image, index) => (
+          <img
+            key={image}
+            src={image}
+            alt={`Salani Digital Hero ${index + 1}`}
+            className={index === activeImage ? "active" : ""}
+          />
         ))}
       </div>
-      <div className="hero-shade" />
-      <div className="hero-grid" />
-      <div className="hero-content reveal">
-        <p className="eyebrow">SALANI DIGITAL <span>•</span> DIGITAL GROWTH STUDIO</p>
-        <h1>Turn attention<br /><em>into growth.</em></h1>
-        <p className="hero-copy">Strategy, creative and performance marketing built to move brands forward — with clarity, consistency and measurable intent.</p>
+
+      <div className="hero-shade"></div>
+      <div className="hero-grid"></div>
+
+      <div className="hero-content">
+
+        <h1 className="hero-main-text">
+          We make sure customers find you everywhere from{" "}
+          <span>Google</span> to <span>ChatGPT</span>.
+        </h1>
+
         <div className="actions">
-          <a className="btn primary" href="#contact">Let’s Grow Your Brand <span>↗</span></a>
-          <a className="btn ghost" href="#portfolio">View Our Work <span>↓</span></a>
+          <a href="#contact" className="btn primary">
+            Let’s talk! <b>↗</b>
+          </a>
+
+          <a href="#technologies" className="btn ghost">
+            Technology <b>↗</b>
+          </a>
         </div>
+
       </div>
-      <div className="hero-meta">
-        <span>SCROLL TO EXPLORE</span><span>0{index + 1} / 0{heroImages.length}</span>
-      </div>
+
     </section>
   );
 }

@@ -1,28 +1,68 @@
-// Real Font Awesome brand/product marks are used instead of numbered placeholders.
-const technologies = [
-  { name: "Google Ads", category: "Performance marketing", icon: "fa-brands fa-google" },
-  { name: "Meta Ads", category: "Paid social", icon: "fa-brands fa-meta" },
-  { name: "Instagram", category: "Social growth", icon: "fa-brands fa-instagram" },
-  { name: "Facebook", category: "Social growth", icon: "fa-brands fa-facebook-f" },
-  { name: "YouTube", category: "Video & reach", icon: "fa-brands fa-youtube" },
-  { name: "Google Analytics", category: "Measurement", icon: "fa-solid fa-chart-line" },
-  { name: "SEO", category: "Organic visibility", icon: "fa-solid fa-magnifying-glass-chart" },
-  { name: "WordPress", category: "Web publishing", icon: "fa-brands fa-wordpress" },
-  { name: "Canva", category: "Creative production", icon: "fa-solid fa-palette" },
-  { name: "Photoshop", category: "Visual design", icon: "fa-solid fa-image" },
-  { name: "Premiere Pro", category: "Video editing", icon: "fa-solid fa-film" },
-  { name: "After Effects", category: "Motion design", icon: "fa-solid fa-wand-magic-sparkles" },
-  { name: "Figma", category: "Digital design", icon: "fa-brands fa-figma" },
-  { name: "HTML / CSS", category: "Web foundations", icon: "fa-brands fa-html5" },
-  { name: "JavaScript", category: "Interactive web", icon: "fa-brands fa-js" },
-  { name: "React", category: "Modern interfaces", icon: "fa-brands fa-react" },
-  { name: "AI Tools", category: "Faster workflows", icon: "fa-solid fa-robot" },
-  { name: "Content Marketing", category: "Audience strategy", icon: "fa-solid fa-pen-nib" },
-  { name: "Social Media", category: "Community growth", icon: "fa-solid fa-hashtag" },
-];
-
-export const typewriterWords = [
-  "Google Ads", "SEO", "Meta Ads", "Analytics", "Content Strategy"
+const technologies = [{
+        name: "Search Engine Optimization",
+        category: "SEO",
+        icon: "fa-solid fa-magnifying-glass-chart"
+    },
+    {
+        name: "Social Media Marketing",
+        category: "Social",
+        icon: "fa-solid fa-hashtag"
+    },
+    {
+        name: "AI Search Optimization",
+        category: "AI Search",
+        icon: "fa-solid fa-robot"
+    },
+    {
+        name: "App Store Optimization",
+        category: "ASO",
+        icon: "fa-solid fa-mobile-screen-button"
+    },
+    {
+        name: "Website Development",
+        category: "Web",
+        icon: "fa-solid fa-code"
+    },
+    {
+        name: "App Development",
+        category: "Mobile",
+        icon: "fa-solid fa-mobile-screen"
+    },
+    {
+        name: "Content Marketing",
+        category: "Content",
+        icon: "fa-solid fa-pen-nib"
+    },
+    {
+        name: "Google Ads",
+        category: "Performance",
+        icon: "fa-brands fa-google"
+    },
+    {
+        name: "Email Marketing",
+        category: "Email",
+        icon: "fa-solid fa-envelope"
+    },
+    {
+        name: "Google Analytics",
+        category: "Analytics",
+        icon: "fa-solid fa-chart-line"
+    },
+    {
+        name: "Influencer Marketing",
+        category: "Influencer",
+        icon: "fa-solid fa-users"
+    },
+    {
+        name: "Digital PR",
+        category: "Public Relations",
+        icon: "fa-solid fa-bullhorn"
+    },
+    {
+        name: "Content Production",
+        category: "Production",
+        icon: "fa-solid fa-photo-film"
+    }
 ];
 
 export default technologies;

@@ -13,22 +13,23 @@ import Footer from "./components/Footer";
 import useReveal from "./hooks/useReveal";
 
 function App() {
-  useReveal();
+    useReveal();
 
-  return (
-    <>
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Technologies />
-        <Brands />
-        <Portfolio />
-        <Contact />
-      </main>
-      <Footer />
-    </>
-  );
+    return (
+        <>
+            <Navbar />
+            <main>
+                <Hero />
+                <About />
+                        <Brands />
+
+                <Technologies />
+                <Portfolio />
+                <Contact />
+            </main>
+            <Footer />
+        </>
+    );
 }
 
-createRoot(document.getElementById("root")).render(<App />);
+createRoot(document.getElementById("root")).render( < App / > );

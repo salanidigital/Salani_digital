@@ -1,1 +1,40 @@
-.real-icon { min-width: 36px; width: 36px; display:flex; justify-content:center; font-size:24px; line-height:1; }
+        .real-icon {
+            min-width: 36px;
+            width: 36px;
+            display: flex;
+            justify-content: center;
+            font-size: 24px;
+            line-height: 1;
+        }
+        /* =========================================================
+   TECHNOLOGY TYPEWRITER EFFECT
+   ========================================================= */
+        
+        .typing-text {
+            display: inline-block;
+            color: #ffffff;
+            font-family: "Manrope", sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+        
+        .typing-cursor {
+            display: inline-block;
+            margin-left: 3px;
+            color: #302f2f;
+            font-weight: 500;
+            animation: typingCursor 0.7s steps(1) infinite;
+        }
+        
+        
+        @keyframes typingCursor {
+            0%,
+            45% {
+                opacity: 1;
+            }
+            46%,
+            100% {
+                opacity: 0;
+            }
+        }

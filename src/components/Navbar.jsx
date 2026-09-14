@@ -24,7 +24,7 @@ export default function Navbar() {
       <div className={`links ${open ? "open" : ""}`}>
         <a href="#home" onClick={close}>Home</a>
         <a href="#about" onClick={close}>About</a>
-        <a href="#portfolio" onClick={close}>Portfolio</a>
+        <a href="#portfolio" onClick={close}>Work</a>
         <a className="nav-cta" href="#contact" onClick={close}>Contact Us <b>↗</b></a>
       </div>
     </nav>

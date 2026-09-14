@@ -8,7 +8,6 @@ export default function Portfolio() {
           <p className="eyebrow dark">SELECTED WORK</p>
           <h2>Work that earns<br /><em>attention.</em></h2>
         </div>
-        <p>Replace these editable placeholders with approved projects, imagery and verified outcomes. We never invent results.</p>
       </div>
       <div className="project-grid">
         {projects.map(([number, category, title, desc, result], i) => (

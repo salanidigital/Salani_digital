@@ -12,16 +12,17 @@ export default function Contact() {
 
     const form = event.currentTarget;
 
-    // Formspree endpoint
-    const endpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT || "https://formspree.io/f/xeaqwoje";
+    const endpoint =
+      import.meta.env.VITE_FORMSPREE_ENDPOINT ||
+      "https://formspree.io/f/xeaqwoje";
 
     try {
       const response = await fetch(endpoint, {
         method: "POST",
         body: new FormData(form),
         headers: {
-          Accept: "application/json",
-        },
+          Accept: "application/json"
+        }
       });
 
       if (response.ok) {
@@ -30,34 +31,40 @@ export default function Contact() {
       } else {
         setStatus("error");
       }
+
     } catch (error) {
       setStatus("error");
     }
   }
 
   return (
-    <section id="contact" className="contact section">
+    <section
+      id="contact"
+      className="contact section"
+    >
+
       <div className="contact-inner">
 
         <div className="contact-copy reveal">
-          <p className="eyebrow">LET’S TALK</p>
+
+          <p className="eyebrow">
+            LET’S TALK
+          </p>
 
           <h2>
-            Have a brand
+            You
             <br />
-            ready to <em>grow?</em>
+            made <em>it!</em>
           </h2>
 
           <p>
-            Tell us where you are today, where you want to go, and what needs
-            to change. We’ll start with the problem — then build the right
-            digital move.
+            
           </p>
 
           <div className="socials">
 
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/salanidigitalofficial"
               target="_blank"
               rel="noreferrer"
               aria-label="Facebook"
@@ -66,14 +73,7 @@ export default function Contact() {
             </a>
 
             <a
-              href="mailto:info@salanidigital.com"
-              aria-label="Email"
-            >
-              <i className="fa-solid fa-envelope" />
-            </a>
-
-            <a
-              href="https://www.instagram.com/salanidigital?stkn=MWgwbmIzY2pzOWdndw=="
+              href="https://www.instagram.com/salanidigital"
               target="_blank"
               rel="noreferrer"
               aria-label="Instagram"
@@ -82,15 +82,23 @@ export default function Contact() {
             </a>
 
             <a
-              href="https://wa.me/8447817722"
+              href="https://www.linkedin.com/company/salanidigital"
               target="_blank"
               rel="noreferrer"
-              aria-label="WhatsApp"
+              aria-label="LinkedIn"
             >
-              <i className="fa-brands fa-whatsapp" />
+              <i className="fa-brands fa-linkedin-in" />
+            </a>
+
+            <a
+              href="mailto:asksalanidigital@outlook.com"
+              aria-label="Email"
+            >
+              <i className="fa-solid fa-envelope" />
             </a>
 
           </div>
+
         </div>
 
         <form
@@ -112,7 +120,6 @@ export default function Contact() {
             <input
               type="email"
               name="email"
-              
               placeholder="you@company.com"
             />
           </label>
@@ -144,7 +151,10 @@ export default function Contact() {
             type="submit"
             disabled={status === "loading"}
           >
-            {status === "loading" ? "Sending…" : "Send Message"}
+            {status === "loading"
+              ? "Sending…"
+              : "Send Message"}
+
             <span>↗</span>
           </button>
 
@@ -163,6 +173,7 @@ export default function Contact() {
         </form>
 
       </div>
+
     </section>
   );
 }
