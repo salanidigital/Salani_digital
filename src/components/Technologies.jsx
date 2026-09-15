@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import "../styles/technologies.css";
 
@@ -23,7 +24,10 @@ export default function Technologies() {
       }, 100);
     }
 
-    else if (!isDeleting && displayText.length === currentPhrase.length) {
+    else if (
+      !isDeleting &&
+      displayText.length === currentPhrase.length
+    ) {
       timeout = setTimeout(() => {
         setIsDeleting(true);
       }, 1800);
@@ -55,19 +59,14 @@ export default function Technologies() {
       <div className="section-head reveal">
 
         <p className="eyebrow dark">
+         <b>TECHNOLOGY</b> 
         </p>
 
-        <h2>
-          Technology
-          <br />
-
-          <em>
-            that drives growth.{" "}
-            <span className="typing-text">
-              {displayText}
-              <span className="typing-cursor">|</span>
-            </span>
-          </em>
+        <h2 className="tech-typing-heading">
+          <span className="typing-text">
+            {displayText}
+            <span className="typing-cursor">|</span>
+          </span>
         </h2>
 
       </div>
@@ -87,3 +86,4 @@ export default function Technologies() {
     </section>
   );
 }
+
