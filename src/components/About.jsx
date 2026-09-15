@@ -1,4 +1,5 @@
 import VantaAbout from "./VantaAbout";
+import restLogo from "../public/rest.png";
 
 export default function About() {
   return (
@@ -11,13 +12,12 @@ export default function About() {
         <div className="about-statement reveal">
 
           <span className="big-number">
-          
           </span>
 
           {/* S.Digital Logo */}
           <div className="about-logo">
             <img
-              src="src/public/rest.png"
+              src={restLogo}
               alt="S.Digital"
             />
           </div>
@@ -33,17 +33,11 @@ export default function About() {
           </p>
 
           <p>
-            Salani Digital helps Indian and international            
+            Salani Digital helps Indian and international businesses grow
+            through online marketing strategies.
 
-            businesses grow through online marketing           
-
-            strategies.            
- Salani Digital is a professional            
-
-            digital marketing            
-agency helping businesses           
-
-            grow online with result-driven marketing
+            Salani Digital is a professional digital marketing agency
+            helping businesses grow online with result-driven marketing
             strategies.
           </p>
 
