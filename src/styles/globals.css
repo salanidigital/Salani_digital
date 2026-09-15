@@ -803,7 +803,7 @@ button {
 
 .contact h2 em {
     font-style: normal;
-    color: var(--red);
+    color: #ffffff;
 }
 
 .contact-copy>p:not(.eyebrow) {

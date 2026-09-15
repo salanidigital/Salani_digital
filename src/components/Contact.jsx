@@ -51,11 +51,11 @@ export default function Contact() {
             LET’S TALK
           </p>
 
-          <h2>
-            You
-            <br />
-            made <em>it!</em>
-          </h2>
+        <h2>
+    <span style={{ color: "#c0070a" }}>You</span>
+    <br />
+    made <em>it!</em>
+</h2>
 
           <p>
             
@@ -120,7 +120,7 @@ export default function Contact() {
             <input
               type="email"
               name="email"
-              placeholder="you@company.com"
+              placeholder="you@"
             />
           </label>
 
@@ -133,7 +133,7 @@ export default function Contact() {
               inputMode="tel"
               autoComplete="tel"
               pattern="[0-9+()\\-\\s]{7,20}"
-              placeholder="+91 98765 43210"
+              placeholder="+91 ***** *****"
             />
           </label>
 
