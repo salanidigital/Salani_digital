@@ -17,7 +17,7 @@ export default function About() {
           {/* S.Digital Logo */}
           <div className="about-logo">
             <img
-              src="src/public/rest.png"
+              src="../public/rest.png"
               alt="S.Digital"
             />
           </div>
