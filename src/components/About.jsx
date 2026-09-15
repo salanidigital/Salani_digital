@@ -17,7 +17,7 @@ export default function About() {
           {/* S.Digital Logo */}
           <div className="about-logo">
             <img
-              src="src/public/rest.png"
+              src="../public/rest.png"
               alt="S.Digital"
             />
           </div>
@@ -33,15 +33,15 @@ export default function About() {
           </p>
 
           <p>
-            Salani Digital helps Indian and international           
+            Salani Digital helps Indian and international            
 
-            businesses grow through online marketing            
+            businesses grow through online marketing           
 
             strategies.            
  Salani Digital is a professional            
 
-            digital marketing             
-agency helping businesses            
+            digital marketing            
+agency helping businesses           
 
             grow online with result-driven marketing
             strategies.
