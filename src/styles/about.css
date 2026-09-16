@@ -8,14 +8,17 @@
 }
 
 
-/* Main content */
+/* =========================================
+   MAIN CONTENT
+========================================= */
 
 .about-body {
     width: min(1400px, 90%);
     margin: 0 auto;
     display: grid;
     grid-template-columns: 0.85fr 1.15fr;
-    align-items: center;
+    /* TOP ALIGNMENT */
+    align-items: start;
     gap: 100px;
     padding: 120px 0;
 }
@@ -28,36 +31,55 @@
 .about-visual {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 320px;
-}
-
-
-/* =========================================
-   ABOUT US LOGO — ONLY
-========================================= */
-
-.about-logo {
-    display: flex;
-    align-items: center;
     justify-content: flex-start;
-    width: 100%;
-}
-
-.about-logo img {
-    display: block;
-    width: 220px;
-    height: auto;
-    max-width: 220px;
-    max-height: 120px;
-    object-fit: contain;
-    object-position: left center;
+    align-items: flex-start;
+    min-height: auto;
+    /* IMPORTANT */
+    padding: 0;
     margin: 0;
 }
 
 
-/* Small decorative line */
+/* =========================================
+   ABOUT LOGO
+========================================= */
+
+.about-logo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+}
+
+
+/* =========================================
+   LOGO IMAGE
+========================================= */
+
+.about-logo img {
+    display: block;
+    width: 220px;
+    max-width: 220px;
+    height: auto;
+    /*
+       IMPORTANT:
+       Your PNG has empty space around
+       the actual logo, so we pull it upward.
+    */
+    margin: -155px 0 0 0;
+    padding: 0;
+    object-fit: contain;
+    object-position: left top;
+    border: none;
+}
+
+
+/* =========================================
+   DECORATIVE LINE
+========================================= */
 
 .about-line {
     width: 90px;
@@ -73,17 +95,31 @@
 
 .about-copy {
     max-width: 720px;
+    margin: 0;
+    padding: 0;
 }
 
+
+/* ABOUT US LABEL */
+
 .about-copy .eyebrow {
-    margin-bottom: 25px;
+    display: block;
+    margin: 0 0 25px 0;
+    padding: 0;
     font-size: 13px;
     font-weight: 800;
     letter-spacing: 0.18em;
+    line-height: 1.2;
 }
 
+
+/* =========================================
+   HEADING
+========================================= */
+
 .about-copy h2 {
-    margin: 0 0 30px;
+    margin: 0 0 30px 0;
+    padding: 0;
     font-family: "Manrope", sans-serif;
     font-size: clamp(38px, 4.2vw, 68px);
     line-height: 1.05;
@@ -92,9 +128,15 @@
     color: #302f2f;
 }
 
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
 .about-description {
     max-width: 650px;
     margin: 0;
+    padding: 0;
     font-family: "DM Sans", sans-serif;
     font-size: 18px;
     line-height: 1.8;
@@ -102,7 +144,9 @@
 }
 
 
-/* Remove unwanted horizontal lines */
+/* =========================================
+   REMOVE UNWANTED HR
+========================================= */
 
 .about-copy hr {
     display: none;
@@ -115,26 +159,43 @@
 
 @media (max-width: 900px) {
     .about-body {
+        width: 90%;
         grid-template-columns: 1fr;
         gap: 60px;
         padding: 90px 0;
+        align-items: start;
     }
+    /* Logo container */
     .about-visual {
         min-height: auto;
+        width: 100%;
         align-items: center;
+        justify-content: flex-start;
+        padding: 0;
+        margin: 0;
     }
+    /* Logo */
     .about-logo {
         justify-content: center;
+        align-items: flex-start;
+        width: 100%;
     }
     .about-logo img {
         width: 200px;
         max-width: 200px;
-        max-height: 110px;
-        object-position: center;
+        max-height: none;
+        /*
+           Smaller negative margin
+           for tablet
+        */
+        margin-top: -130px;
+        object-position: center top;
     }
+    /* Decorative line */
     .about-line {
         margin: 25px auto 0;
     }
+    /* Copy */
     .about-copy {
         max-width: 100%;
     }
@@ -154,22 +215,63 @@
         gap: 45px;
         padding: 70px 0;
     }
+    /* Logo container */
+    .about-visual {
+        width: 100%;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .about-logo {
+        justify-content: center;
+    }
     .about-logo img {
         width: 180px;
         max-width: 180px;
-        max-height: 100px;
+        /*
+           Mobile logo position
+        */
+        margin-top: -110px;
+        object-position: center top;
     }
+    /* Label */
     .about-copy .eyebrow {
         margin-bottom: 18px;
+        font-size: 12px;
     }
+    /* Heading */
     .about-copy h2 {
         font-size: 36px;
         line-height: 1.08;
         letter-spacing: -0.035em;
         margin-bottom: 24px;
     }
+    /* Description */
     .about-description {
         font-size: 16px;
         line-height: 1.7;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+    .about-body {
+        width: 90%;
+        padding: 60px 0;
+        gap: 40px;
+    }
+    .about-logo img {
+        width: 160px;
+        max-width: 160px;
+        margin-top: -95px;
+    }
+    .about-copy h2 {
+        font-size: 32px;
+    }
+    .about-description {
+        font-size: 15px;
     }
 }

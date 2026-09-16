@@ -1,6 +1,3 @@
-/* Styling for portfolio is intentionally kept in globals.css to preserve the second build pixel styling. */
-
-
 /* =========================================================
    PORTFOLIO / WORK
    ========================================================= */
@@ -95,7 +92,9 @@
 }
 
 
-/* Reveal */
+/* =========================================================
+   REVEAL
+   ========================================================= */
 
 .project.visible {
     opacity: 1;
@@ -103,11 +102,25 @@
 }
 
 
-/* Slight hover */
+/* =========================================================
+   PROJECT HOVER
+   ========================================================= */
 
 .project:hover {
     z-index: 2;
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================================
+   CLICKABLE IMAGE LINK
+   ========================================================= */
+
+.project-image-link {
+    display: block;
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
 }
 
 
@@ -124,7 +137,9 @@
 }
 
 
-/* Image */
+/* =========================================================
+   PROJECT IMAGE
+   ========================================================= */
 
 .project-image img {
     display: block;
@@ -136,7 +151,9 @@
 }
 
 
-/* Image hover */
+/* =========================================================
+   IMAGE HOVER
+   ========================================================= */
 
 .project:hover .project-image img {
     transform: scale(1.04);
@@ -166,8 +183,12 @@
    ========================================================= */
 
 .project-info {
-    min-height: 245px;
-    padding: 27px 25px 22px;
+    /*
+       Reduced from 245px because description
+       has been removed from the project cards.
+    */
+    min-height: 185px;
+    padding: 25px 25px 20px;
     display: flex;
     flex-direction: column;
 }
@@ -178,7 +199,7 @@
    ========================================================= */
 
 .project-info .tag {
-    margin: 0 0 20px;
+    margin: 0 0 18px;
     color: var(--red);
     font-family: "Manrope", sans-serif;
     font-size: 10px;
@@ -221,7 +242,7 @@
 
 .project-bottom {
     margin-top: auto;
-    padding-top: 18px;
+    padding-top: 16px;
     border-top: 1px solid #dedcd7;
     display: flex;
     align-items: center;
@@ -231,7 +252,7 @@
 
 
 /* =========================================================
-   RESULT
+   RESULT / VIEW WEBSITE
    ========================================================= */
 
 .project-bottom>span {
@@ -240,11 +261,12 @@
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 0.10em;
+    white-space: nowrap;
 }
 
 
 /* =========================================================
-   DISCUSS PROJECT
+   VISIT WEBSITE LINK
    ========================================================= */
 
 .project-bottom a {
@@ -254,8 +276,14 @@
     font-weight: 700;
     letter-spacing: 0.04em;
     white-space: nowrap;
+    text-decoration: none;
     transition: color 0.25s ease, transform 0.25s ease;
 }
+
+
+/* =========================================================
+   VISIT WEBSITE HOVER
+   ========================================================= */
 
 .project-bottom a:hover {
     color: var(--black);
@@ -272,6 +300,7 @@
         height: 360px;
     }
     .project-info {
+        min-height: 175px;
         padding: 24px 20px 20px;
     }
     .project-info h3 {
@@ -299,6 +328,9 @@
     .project-image {
         height: 330px;
     }
+    .project-info {
+        min-height: 175px;
+    }
 }
 
 
@@ -318,29 +350,49 @@
         font-size: 14px;
         line-height: 1.6;
     }
+    /* One project per row */
     .project-grid {
         grid-template-columns: 1fr;
     }
+    /* Project image */
     .project-image {
         height: 330px;
     }
+    /* Number */
     .project-image>span {
         top: 16px;
         left: 18px;
     }
+    /* Project information */
     .project-info {
-        min-height: 230px;
-        padding: 23px 20px 20px;
+        min-height: 170px;
+        padding: 22px 20px 18px;
     }
+    /* Category */
     .project-info .tag {
         margin-bottom: 16px;
     }
+    /* Title */
     .project-info h3 {
         font-size: 23px;
     }
+    /* Description */
     .project-info>p {
         font-size: 14px;
         margin: 17px 0 22px;
+    }
+    /* Bottom */
+    .project-bottom {
+        padding-top: 14px;
+        gap: 10px;
+    }
+    /* Bottom text */
+    .project-bottom>span {
+        font-size: 9px;
+    }
+    /* Website link */
+    .project-bottom a {
+        font-size: 10px;
     }
 }
 
@@ -355,6 +407,10 @@
     }
     .project-image {
         height: 280px;
+    }
+    .project-info {
+        min-height: 165px;
+        padding: 20px 18px 17px;
     }
     .project-info h3 {
         font-size: 21px;

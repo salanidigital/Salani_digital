@@ -9,40 +9,57 @@
 }
 
 
-/* Section heading */
+/* ================================
+   SECTION HEADING
+   SAME ALIGNMENT AS PORTFOLIO
+================================ */
 
 .brands .section-head {
-    margin-bottom: 55px;
-    padding-left: 3%;
+    width: min(var(--max), 90%);
+    max-width: var(--max);
+    margin: 0 auto 55px;
+    padding: 0;
 }
 
+
+/* Eyebrow */
+
 .brands .eyebrow {
-    margin-bottom: 14px;
+    margin: 0 0 14px;
+    color: var(--red);
     letter-spacing: 0.16em;
     font-size: 12px;
     font-weight: 700;
 }
 
+
+/* Heading */
+
 .brands .section-head h2 {
     margin: 0;
-    font-size: clamp(2.2rem, 4vw, 4rem);
-    line-height: 1.05;
-    font-weight: 600;
-    letter-spacing: -0.04em;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(3rem, 5.7vw, 6.2rem);
+    font-weight: 800;
+    line-height: 0.94;
+    letter-spacing: -0.07em;
+    color: #ffffff;
 }
 
 .brands .section-head h2 em {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 800;
+    color: #000000;
 }
 
 
 /* ================================
    LOGO GRID
+   SAME WIDTH / ALIGNMENT
 ================================ */
 
 .brands-grid {
-    width: min(1200px, 92%);
+    width: min(var(--max), 90%);
+    max-width: var(--max);
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -69,7 +86,7 @@
 }
 
 
-/* Subtle shine */
+/* Shine */
 
 .brand-card::before {
     content: "";
@@ -130,7 +147,7 @@
 }
 
 
-/* Logo movement on hover */
+/* Logo hover */
 
 .brand-card:hover .brand-logo {
     transform: scale(1.06);
@@ -145,7 +162,15 @@
     .brands {
         padding: 90px 0;
     }
+    .brands .section-head {
+        width: 90%;
+        margin-bottom: 45px;
+    }
+    .brands .section-head h2 {
+        font-size: clamp(3rem, 7vw, 5rem);
+    }
     .brands-grid {
+        width: 90%;
         grid-template-columns: repeat(2, 1fr);
         gap: 18px;
     }
@@ -167,10 +192,12 @@
         padding: 75px 0;
     }
     .brands .section-head {
+        width: 88%;
         margin-bottom: 35px;
     }
     .brands .section-head h2 {
-        font-size: 2.2rem;
+        font-size: 3.5rem;
+        line-height: 0.95;
     }
     .brands-grid {
         width: 90%;
@@ -197,6 +224,9 @@
 ================================ */
 
 @media (max-width: 380px) {
+    .brands .section-head h2 {
+        font-size: 3rem;
+    }
     .brands-grid {
         grid-template-columns: 1fr;
     }

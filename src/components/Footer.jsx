@@ -1,15 +1,14 @@
 export default function Footer() {
   return (
     <footer>
-      {/* S.Digital */}
-      <a className="brand" href="#home" aria-label="S.Digital">
-        <span className="brand-mark">S</span>
-        <span>
-          Salani<span>Digital</span>
-        </span>
+      <a className="brand" href="#home" aria-label="Salani Digital">
+        <img
+          src="src/public/Footer.png"
+          alt="Salani Digital"
+          className="footer-logo"
+        />
       </a>
 
-      {/* Developer Credit */}
       <div className="footer-credit">
         <span className="built-by">
           Built by{" "}

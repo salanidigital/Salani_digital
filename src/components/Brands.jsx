@@ -66,8 +66,10 @@ export default function Brands() {
           OUR CLIENTS
         </p>
 
-       <h2>
- Success we’ve built{" "}<em style={{ color: "#000000" }}>together.</em></h2>
+     <h2>
+  Success we’ve built<br />
+  <em>together.</em>
+</h2>
       </div>
 
       <div className="brands-grid">

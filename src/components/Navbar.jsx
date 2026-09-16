@@ -5,27 +5,72 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 30);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 30);
+    };
+
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
   }, []);
 
-  const close = () => setOpen(false);
+  const close = () => {
+    setOpen(false);
+  };
 
   return (
     <nav className={`nav ${scrolled ? "nav-scrolled" : ""}`}>
-      <a className="brand" href="#home">
-        <span className="brand-mark">S</span>
-        <span>Salani<span>Digital</span></span>
+      
+      {/* ================================
+          SALANI DIGITAL LOGO
+      ================================= */}
+      <a className="brand" href="#home" onClick={close}>
+        <img
+          src="src/public/Footer100.png"
+          alt="Salani Digital"
+          className="nav-logo"
+        />
       </a>
-      <button className="hamb" aria-label="Toggle menu" onClick={() => setOpen(!open)}>
-        <i /><i /><i />
+
+      {/* ================================
+          MOBILE MENU BUTTON
+      ================================= */}
+      <button
+        className="hamb"
+        aria-label="Toggle menu"
+        aria-expanded={open}
+        onClick={() => setOpen(!open)}
+      >
+        <i />
+        <i />
+        <i />
       </button>
+
+      {/* ================================
+          NAVIGATION LINKS
+      ================================= */}
       <div className={`links ${open ? "open" : ""}`}>
-        <a href="#home" onClick={close}>Home</a>
-        <a href="#about" onClick={close}>About</a>
-        <a href="#portfolio" onClick={close}>Work</a>
-        <a className="nav-cta" href="#contact" onClick={close}>Contact Us <b>↗</b></a>
+        <a href="#home" onClick={close}>
+          Home
+        </a>
+
+        <a href="#about" onClick={close}>
+          About
+        </a>
+
+        <a href="#portfolio" onClick={close}>
+          Work
+        </a>
+
+        <a
+          className="nav-cta"
+          href="#contact"
+          onClick={close}
+        >
+          Contact Us <b>↗</b>
+        </a>
       </div>
     </nav>
   );

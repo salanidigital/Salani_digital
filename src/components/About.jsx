@@ -17,12 +17,10 @@ export default function About() {
           {/* S.Digital Logo */}
           <div className="about-logo">
             <img
-              src="src/public/rest.png"
-              alt="S.Digital"
+src="src/public/Footer900.png"              alt="S.Digital"
             />
           </div>
 
-          <div className="line" />
 
         </div>
 
