@@ -3,7 +3,7 @@ export default function Footer() {
     <footer>
       <a className="brand" href="#home" aria-label="Salani Digital">
         <img
-          src="src/public/Footer.png"
+          src="https://raw.githubusercontent.com/salanidigital/Salani_digital/main/src/public/Footer.png"
           alt="Salani Digital"
           className="footer-logo"
         />
