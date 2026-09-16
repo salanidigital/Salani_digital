@@ -22,13 +22,13 @@ export default function Navbar() {
 
   return (
     <nav className={`nav ${scrolled ? "nav-scrolled" : ""}`}>
-      
+
       {/* ================================
           SALANI DIGITAL LOGO
       ================================= */}
       <a className="brand" href="#home" onClick={close}>
         <img
-          src="src/public/Footer100.png"
+          src="https://raw.githubusercontent.com/salanidigital/Salani_digital/main/src/public/Footer100.png"
           alt="Salani Digital"
           className="nav-logo"
         />
@@ -52,6 +52,7 @@ export default function Navbar() {
           NAVIGATION LINKS
       ================================= */}
       <div className={`links ${open ? "open" : ""}`}>
+
         <a href="#home" onClick={close}>
           Home
         </a>
@@ -71,6 +72,7 @@ export default function Navbar() {
         >
           Contact Us <b>↗</b>
         </a>
+
       </div>
     </nav>
   );
