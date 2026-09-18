@@ -23,6 +23,5 @@ I worked on the website architecture, responsive frontend, animations, visual in
 🔗 **Developer Portfolio:**  
 https://shreyansh-03.vercel.app/
 
-🔗 **GitHub:**  
-https://github.com/shreyanshshikhar
+
 
