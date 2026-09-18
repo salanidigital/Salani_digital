@@ -61,7 +61,7 @@ export default function Navbar() {
           About
         </a>
 
-        <a href="#work" onClick={close}>
+        <a href="#portfolio" onClick={close}>
           Work
         </a>
 
