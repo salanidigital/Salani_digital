@@ -32,10 +32,10 @@ export default function Hero() {
 
       <div className="hero-content">
 
-        <h1 className="hero-main-text">
-          We make sure customers find you everywhere from{" "}
-          <span>Google</span> to <span>ChatGPT</span>.
-        </h1>
+       <h1 className="hero-main-text">
+  From{" "}
+  <span>Google to ChatGPT</span>, We Make Sure Customers Find You Everywhere.
+</h1>
 
         <div className="actions">
           <a href="#contact" className="btn primary">
