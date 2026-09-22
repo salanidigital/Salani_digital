@@ -6,7 +6,7 @@ import technologies from "../data/technologies";
 import TechnologyCard from "./TechnologyCard";
 
 export default function Technologies() {
-  const phrases = ["SEO", "SMM", "ASO", "Google Ads","Email Marketing","Google Analytics","Influencer Marketing","Digital PR","Content Production"];
+  const phrases = ["Search Engine Optimization", "Social Media Marketing", "ASO", "Website Development","Google Ads","Email Marketing","App development","Google Analytics","Influencer Marketing","Digital PR","Content Production"];
 
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
