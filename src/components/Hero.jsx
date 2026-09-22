@@ -34,7 +34,7 @@ export default function Hero() {
 
        <h1 className="hero-main-text">
   From{" "}
-  <span>Google to ChatGPT</span>, We Make Sure Customers Find You Everywhere.
+  <span>Google</span> to <span>ChatGPT</span>, We Make Sure Customers Find You Everywhere.
 </h1>
 
         <div className="actions">
