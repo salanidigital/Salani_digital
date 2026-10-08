@@ -6,55 +6,77 @@ const LanguageContext = createContext(null);
 export const SUPPORTED = ["en", "pl", "hi", "nl"];
 export const DEFAULT_LANG = "en";
 
-/* Detect lang from timezone → browser locale → default */
+/*
+  English is ALWAYS the default language.
+
+  Language is NOT detected from:
+  - timezone
+  - browser language
+  - country/location
+
+  A different language is used only if the user manually
+  selected it previously and it is saved in localStorage.
+*/
 export function detectLang() {
-  try {
-    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
-
-    if (tz === "Europe/Warsaw") return "pl";
-    if (tz === "Asia/Kolkata" || tz === "Asia/Calcutta") return "hi";
-    if (tz === "Europe/Amsterdam") return "nl";
-
-    const nav = (navigator.language || "en").slice(0, 2).toLowerCase();
-    if (SUPPORTED.includes(nav)) return nav;
-  } catch (_) {}
   return DEFAULT_LANG;
 }
 
 export function LanguageProvider({ children }) {
   const [lang, setLang] = useState(DEFAULT_LANG);
 
-  /* On mount: read localStorage, else auto-detect */
+  /*
+    On mount:
+    1. Check if the user previously selected a language.
+    2. If valid, use that language.
+    3. Otherwise, use English.
+  */
   useEffect(() => {
     const saved = localStorage.getItem("salani-lang");
-    setLang(saved && SUPPORTED.includes(saved) ? saved : detectLang());
+
+    if (saved && SUPPORTED.includes(saved)) {
+      setLang(saved);
+    } else {
+      setLang(DEFAULT_LANG);
+    }
   }, []);
 
-  /* Reflect on <html lang> + persist */
+  /*
+    Update <html lang> and save the user's selection.
+  */
   useEffect(() => {
     document.documentElement.lang = lang;
     localStorage.setItem("salani-lang", lang);
   }, [lang]);
 
-  /* t("hero.line1") → translated string */
+  /*
+    Usage:
+      t("hero.line1")
+
+    Gets the translated value for the selected language.
+
+    If the translation is missing, English is used as fallback.
+  */
   const t = (path) => {
     const keys = path.split(".");
     let node = translations[lang];
 
-    for (const k of keys) {
+    for (const key of keys) {
       if (node == null) break;
-      node = node[k];
+      node = node[key];
     }
 
-    // fallback to English if missing
+    // Fallback to English if translation is missing
     if (node == null) {
-      let fb = translations[DEFAULT_LANG];
-      for (const k of keys) {
-        if (fb == null) break;
-        fb = fb[k];
+      let fallback = translations[DEFAULT_LANG];
+
+      for (const key of keys) {
+        if (fallback == null) break;
+        fallback = fallback[key];
       }
-      return fb ?? path;
+
+      return fallback ?? path;
     }
+
     return node;
   };
 
@@ -67,6 +89,10 @@ export function LanguageProvider({ children }) {
 
 export function useLang() {
   const ctx = useContext(LanguageContext);
-  if (!ctx) throw new Error("useLang must be used inside <LanguageProvider>");
+
+  if (!ctx) {
+    throw new Error("useLang must be used inside <LanguageProvider>");
+  }
+
   return ctx;
 }
