@@ -1,0 +1,435 @@
+/* =========================================================
+   PORTFOLIO / WORK
+   ========================================================= */
+
+.portfolio {
+    background: var(--paper);
+    color: var(--black);
+}
+
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+.portfolio .section-head {
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto 60px;
+}
+
+.portfolio .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10%;
+    align-items: end;
+}
+
+.portfolio .split>p {
+    margin: 0 0 28px !important;
+    max-width: 430px !important;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.portfolio .eyebrow {
+    color: var(--red);
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.portfolio .section-head h2 {
+    margin: 0;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(3rem, 5.7vw, 6.2rem);
+    font-weight: 800;
+    line-height: 0.94;
+    letter-spacing: -0.07em;
+    color: var(--black);
+}
+
+.portfolio .section-head h2 em {
+    font-style: normal;
+    color: var(--red);
+}
+
+
+/* =========================================================
+   PROJECT GRID
+   ========================================================= */
+
+.project-grid {
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+}
+
+
+/* =========================================================
+   PROJECT CARD
+   ========================================================= */
+
+.project {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #dedcd7;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.7s ease, transform 0.7s ease, box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   REVEAL
+   ========================================================= */
+
+.project.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   PROJECT HOVER
+   ========================================================= */
+
+.project:hover {
+    z-index: 2;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================================
+   CLICKABLE IMAGE LINK
+   ========================================================= */
+
+.project-image-link {
+    display: block;
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   PROJECT IMAGE
+   ========================================================= */
+
+.project-image {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    background: #e9e7e2;
+}
+
+
+/* =========================================================
+   PROJECT IMAGE
+   ========================================================= */
+
+.project-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+
+/* =========================================================
+   IMAGE HOVER
+   ========================================================= */
+
+.project:hover .project-image img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   PROJECT NUMBER
+   ========================================================= */
+
+.project-image>span {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    z-index: 3;
+    color: #ffffff;
+    font-family: "Manrope", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   PROJECT INFO
+   ========================================================= */
+
+.project-info {
+    /*
+       Reduced from 245px because description
+       has been removed from the project cards.
+    */
+    min-height: 185px;
+    padding: 25px 25px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   CATEGORY
+   ========================================================= */
+
+.project-info .tag {
+    margin: 0 0 18px;
+    color: var(--red);
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   PROJECT TITLE
+   ========================================================= */
+
+.project-info h3 {
+    margin: 0;
+    color: #111111;
+    font-family: "Manrope", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.project-info>p {
+    margin: 20px 0 25px;
+    color: #707070;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   PROJECT BOTTOM
+   ========================================================= */
+
+.project-bottom {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid #dedcd7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+
+/* =========================================================
+   RESULT / VIEW WEBSITE
+   ========================================================= */
+
+.project-bottom>span {
+    color: #222222;
+    font-family: "Manrope", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.10em;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   VISIT WEBSITE LINK
+   ========================================================= */
+
+.project-bottom a {
+    color: var(--red);
+    font-family: "Manrope", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+
+/* =========================================================
+   VISIT WEBSITE HOVER
+   ========================================================= */
+
+.project-bottom a:hover {
+    color: var(--black);
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+    .project-image {
+        height: 360px;
+    }
+    .project-info {
+        min-height: 175px;
+        padding: 24px 20px 20px;
+    }
+    .project-info h3 {
+        font-size: 24px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+    .portfolio .split {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .portfolio .split>p {
+        margin: 0 !important;
+        max-width: 600px !important;
+    }
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .project-image {
+        height: 330px;
+    }
+    .project-info {
+        min-height: 175px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 620px) {
+    .portfolio .section-head {
+        margin-bottom: 42px;
+    }
+    .portfolio .section-head h2 {
+        font-size: 3.5rem;
+        line-height: 0.95;
+    }
+    .portfolio .split>p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    /* One project per row */
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    /* Project image */
+    .project-image {
+        height: 330px;
+    }
+    /* Number */
+    .project-image>span {
+        top: 16px;
+        left: 18px;
+    }
+    /* Project information */
+    .project-info {
+        min-height: 170px;
+        padding: 22px 20px 18px;
+    }
+    /* Category */
+    .project-info .tag {
+        margin-bottom: 16px;
+    }
+    /* Title */
+    .project-info h3 {
+        font-size: 23px;
+    }
+    /* Description */
+    .project-info>p {
+        font-size: 14px;
+        margin: 17px 0 22px;
+    }
+    /* Bottom */
+    .project-bottom {
+        padding-top: 14px;
+        gap: 10px;
+    }
+    /* Bottom text */
+    .project-bottom>span {
+        font-size: 9px;
+    }
+    /* Website link */
+    .project-bottom a {
+        font-size: 10px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+    .portfolio .section-head h2 {
+        font-size: 3rem;
+    }
+    .project-image {
+        height: 280px;
+    }
+    .project-info {
+        min-height: 165px;
+        padding: 20px 18px 17px;
+    }
+    .project-info h3 {
+        font-size: 21px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .project,
+    .project-image img,
+    .project-bottom a {
+        transition: none;
+    }
+    .project {
+        opacity: 1;
+        transform: none;
+    }
+}

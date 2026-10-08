@@ -1,0 +1,275 @@
+/* ================================
+   CLIENT BRANDS
+================================ */
+
+.brands {
+    position: relative;
+    padding: 110px 0;
+    overflow: hidden;
+}
+
+
+/* ================================
+   SECTION HEADING
+================================ */
+
+.brands .section-head {
+    width: min(var(--max), 90%);
+    max-width: var(--max);
+    margin: 0 auto 55px;
+    padding: 0;
+    /* Remove any unwanted outline */
+    border: none !important;
+    outline: none !important;
+}
+
+
+/* ================================
+   EYEBROW
+================================ */
+
+.brands .eyebrow {
+    margin: 0 0 14px;
+    color: var(--red);
+    letter-spacing: 0.16em;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* ================================
+   HEADING
+================================ */
+
+.brands .section-head h2 {
+    margin: 0;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(3rem, 5.7vw, 6.2rem);
+    font-weight: 800;
+    line-height: 0.94;
+    letter-spacing: -0.07em;
+    color: #ffffff;
+    border: none !important;
+    outline: none !important;
+}
+
+.brands .section-head h2 em {
+    font-style: normal;
+    font-weight: 800;
+    color: #302f2f;
+}
+
+
+/* ================================
+   LOGO GRID
+================================ */
+
+.brands-grid {
+    width: min(var(--max), 90%);
+    max-width: var(--max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    /* Completely remove grid lines */
+    border: none !important;
+    outline: none !important;
+}
+
+
+/* ================================
+   LOGO CARD
+================================ */
+
+.brand-card {
+    position: relative;
+    min-height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.72);
+    /* REMOVE OUTER LINE */
+    border: none !important;
+    outline: none !important;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease, background 0.35s ease;
+}
+
+
+/* ================================
+   SHINE EFFECT
+================================ */
+
+.brand-card::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    top: -100px;
+    right: -80px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    filter: blur(30px);
+    opacity: 0;
+    transition: opacity 0.45s ease;
+    pointer-events: none;
+}
+
+
+/* ================================
+   HOVER
+================================ */
+
+.brand-card:hover {
+    transform: translateY(-7px);
+    background: #ffffff;
+    /* No border on hover */
+    border: none !important;
+    outline: none !important;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.10), 0 5px 15px rgba(15, 23, 42, 0.05);
+}
+
+.brand-card:hover::before {
+    opacity: 1;
+}
+
+
+/* ================================
+   LOGO CONTAINER
+================================ */
+
+.brand-logo-wrap {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    border: none !important;
+    outline: none !important;
+}
+
+
+/* ================================
+   CLIENT LOGO
+================================ */
+
+.brand-logo {
+    display: block;
+    max-width: 82%;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border: none !important;
+    outline: none !important;
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), filter 0.35s ease;
+}
+
+
+/* ================================
+   LOGO HOVER
+================================ */
+
+.brand-card:hover .brand-logo {
+    transform: scale(1.06);
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+    .brands {
+        padding: 90px 0;
+    }
+    .brands .section-head {
+        width: 90%;
+        margin-bottom: 45px;
+    }
+    .brands .section-head h2 {
+        font-size: clamp(3rem, 7vw, 5rem);
+    }
+    .brands-grid {
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+        border: none !important;
+        outline: none !important;
+    }
+    .brand-card {
+        min-height: 170px;
+        border: none !important;
+        outline: none !important;
+    }
+    .brand-logo {
+        max-height: 90px;
+    }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+    .brands {
+        padding: 75px 0;
+    }
+    .brands .section-head {
+        width: 88%;
+        margin-bottom: 35px;
+    }
+    .brands .section-head h2 {
+        font-size: 3.5rem;
+        line-height: 0.95;
+    }
+    .brands-grid {
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        border: none !important;
+        outline: none !important;
+    }
+    .brand-card {
+        min-height: 145px;
+        padding: 20px;
+        border-radius: 16px;
+        border: none !important;
+        outline: none !important;
+    }
+    .brand-logo-wrap {
+        height: 90px;
+        border: none !important;
+        outline: none !important;
+    }
+    .brand-logo {
+        max-width: 88%;
+        max-height: 75px;
+    }
+}
+
+
+/* ================================
+   VERY SMALL DEVICES
+================================ */
+
+@media (max-width: 380px) {
+    .brands .section-head h2 {
+        font-size: 3rem;
+    }
+    .brands-grid {
+        grid-template-columns: 1fr;
+        border: none !important;
+        outline: none !important;
+    }
+    .brand-card {
+        min-height: 150px;
+        border: none !important;
+        outline: none !important;
+    }
+}
