@@ -143,7 +143,7 @@ export default function Navbar() {
 
         <a className="brand" href="#home" onClick={closeAll}>
           <img
-            src="https://raw.githubusercontent.com/salanidigital/Salani_digital/main/src/public/Footer150.png"
+            src="https://raw.githubusercontent.com/salanidigital/Salani_digital/main/src/public/Footer100.png"
             alt="Salani Digital"
             className="nav-logo"
           />
