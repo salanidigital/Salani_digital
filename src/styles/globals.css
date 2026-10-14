@@ -1721,24 +1721,6 @@ footer .built-by strong {
 }
 
 
-/* =========================================================
-   ABOUT — HANDJET FONT
-   ========================================================= */
-
-#about .about-body .about-copy,
-#about .about-body .about-copy p,
-#about .about-body .about-copy .eyebrow,
-#about .about-body .big-number {
-    font-family: "Handjet", sans-serif !important;
-}
-
-#about .about-body .about-copy .eyebrow {
-    font-weight: 600 !important;
-}
-
-#about .about-body .about-copy>p:not(.eyebrow) {
-    font-weight: 500 !important;
-}
 
 
 /* =========================================================
